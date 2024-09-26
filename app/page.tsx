@@ -1,7 +1,7 @@
 "use client"
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-
+import "./style.css"
 export default function Home() {
  
   const router = useRouter()
@@ -12,12 +12,17 @@ export default function Home() {
    router.push(value) 
   }
   return (
-  <h1>
+<div className="main">
+<h1>
     vedio call app
-    <input type="room name " onChange={(e) => setValue(e.target.value)} /> 
+    </h1>
+   <div>
+   <input type="room name " placeholder="create a room " onChange={(e) => setValue(e.target.value)} /> 
     <button onClick={pushFunc}>
       create room 
     </button>
-  </h1>
+   </div>
+ 
+</div>
   );
 }
